@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Bookify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="index.html" class="logo">Book<span>ify</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">Home</a></li>
+                <li><a href="about.html" id="aboutus-link">About Us</a></li>
+                <li><a href="contact.html" id="contactus-link">Contact Us</a></li>
+                <li><a href="signup.html" id="signup-link" class="active">Sign Up</a></li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+                <li><a href="profile.html" id="profile-link">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="signup">
+        <h1>Sign<span> Up</span></h1>
+        <p>Join us and book your favorite events hassle-free!</p>
+
+        <form id="signup-form">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="nic">National Identity Card Number</label>
+            <input type="text" id="nic" name="nic" required>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <div id="success-message" class="hidden">
+            <p>Registration Successful! You can now <a href="login.html">login</a>.</p>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            document.getElementById("success-message").classList.remove("hidden");
+            document.getElementById("signup-form").reset();
+        });
+    </script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="logo">Book<span>ify</span></h3>
+                <p>Bookify is your go-to platform for booking concerts, movies, conferences, and more. Experience seamless event bookings with advanced features and real-time availability.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Site Map</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">SignUp</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>FAQ</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> +94777389712 | +94777731672</p>
+                <p><i class="fas fa-map-marker-alt"></i> No 261/A/3/5, Hokandara Road, Thalawathugoda</p>
+                <p><i class="fas fa-envelope"></i> hello@bookify.com</p>
+            </div>
+        </div>
+    
+        
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bookify. All Rights Reserved.</p>
+            <p>Digitally crafted by Infinity Labs</p>
+        </div>
+    </footer>
+
+</body>
+</html>
