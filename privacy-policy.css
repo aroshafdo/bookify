@@ -1,0 +1,164 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.toc {
+    background: #0f3460;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    
+}
+
+.toc h2 {
+    color: #e94560;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.toc ul {
+    list-style: none;
+    columns: 1; 
+    display: grid;
+    
+}
+
+.toc li {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #00a8cc33; 
+}
+
+.toc li:last-child {
+    border-bottom: none;
+}
+
+.toc a {
+    color: #00a8cc;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    padding: 0.5rem;
+}
+
+.toc a:hover {
+    color: #e94560;
+    transform: translateX(10px);
+}
+
+.policy-section {
+    background: #16213e;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.policy-section h2 {
+    color: #00a8cc;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.policy-section p {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.policy-section ul {
+    margin-left: 2rem;
+    list-style: square;
+    color: #00a8cc;
+}
+
+.policy-section li {
+    margin-bottom: 0.8rem;
+    padding-left: 1rem;
+}
+
+.privacy-footer {
+    background: #0f3460;
+    color: white;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.privacy-footer a {
+    color: #00a8cc;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.privacy-footer a:hover {
+    color: #e94560;
+}
+
+@media (max-width: 768px) {
+    .toc ul {
+        columns: 1;
+    }
+    
+    .privacy-header h1 {
+        font-size: 2rem;
+    }
+    
+    .policy-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .toc {
+        padding: 1.5rem;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.policy-section::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, #00a8cc, #e94560);
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
+}
+
+.privacy-footer p {
+    margin: 1rem 0;
+    color: #00a8cc;
+}
+
+.social-icons {
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #e94560;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #00a8cc;
+}
+

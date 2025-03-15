@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="concert.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Book<span>ify</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">Home</a></li>
+                <li><a href="about.html" id="aboutus-link">About Us</a></li>
+                <li><a href="contact.html" id="contactus-link">Contact Us</a></li>
+                <li><a href="signup.html" id="signup-link">Sign Up</a></li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+                <li><a href="profile.html" id="profile-link">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="booking-container">
+        <div class="event-details">
+            <div class="video-container">
+                <video id="event-video" autoplay loop muted playsinline>
+                    <source src="" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <h1 id="event-title"></h1>
+            <div class="event-info">
+                <p id="event-date"></p>
+                <p id="event-location"></p>
+                <p id="event-time"></p>
+            </div>
+        </div>
+
+        <div class="ticket-selection">
+            
+            <h2>Concerts Booking</h2>
+            <table>
+                
+                <tr>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>General</td>
+                    <td id="general-price"></td>
+                    <td>
+                        <button onclick="updateTickets('general', -1)">−</button>
+                        <span id="general-tickets">0</span>
+                        <button onclick="updateTickets('general', 1)">+</button>
+                    </td>
+                    <td id="general-amount">0 LKR</td>
+                </tr>
+                <tr>
+                    <td>VIP</td>
+                    <td id="vip-price"></td>
+                    <td>
+                        <button onclick="updateTickets('vip', -1)">−</button>
+                        <span id="vip-tickets">0</span>
+                        <button onclick="updateTickets('vip', 1)">+</button>
+                    </td>
+                    <td id="vip-amount">0 LKR</td>
+                </tr>
+            </table>
+
+            <div class="total-section">
+                <h3>Total Amount:</h3>
+                <div id="total-amount">0 LKR</div>
+            </div>
+            <div class="booking-form-container" id="bookingFormContainer">
+                <h2>Personal Details</h2>
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="nic">NIC Number:</label>
+                        <input type="text" id="nic" name="nic" required>
+                        <div class="error-message" id="nicError"></div>
+                    </div>
+                </form>
+            </div>    
+            
+            <button class="checkout-btn">Proceed to Checkout →</button>
+        </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="logo">Book<span>ify</span></h3>
+                <p>Bookify is your go-to platform for booking concerts, movies, conferences, and more. Experience seamless event bookings with advanced features and real-time availability.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Site Map</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">SignUp</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>FAQ</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> +94777389712 | +94777731672</p>
+                <p><i class="fas fa-map-marker-alt"></i> No 261/A/3/5, Hokandara Road, Thalawathugoda</p>
+                <p><i class="fas fa-envelope"></i> hello@bookify.com</p>
+            </div>
+        </div>
+    
+        
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bookify. All Rights Reserved.</p>
+            <p>Designed & Developed by ⚡︎ Aro ⚡︎</p>
+        </div>
+    </footer>
+
+    <script src="concert.js"></script>
+</body>
+</html>
