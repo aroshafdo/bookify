@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bookify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Book<span>ify</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h1>Contact <span>Us</span></h1>
+        <p>If you have any inquiries, feel free to reach out. Our team is here to assist you!</p>
+
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Done</button>
+        </form>
+
+        <div id="confirmation-message" class="hidden">
+            <p>Our agent will contact you as soon as possible.</p>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("confirmation-message").classList.remove("hidden");
+            document.getElementById("contact-form").reset();
+        });
+    </script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="logo">Book<span>ify</span></h3>
+                <p>Bookify is your go-to platform for booking concerts, movies, conferences, and more. Experience seamless event bookings with advanced features and real-time availability.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Site Map</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">SignUp</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>FAQ</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> +94777389712 | +94777731672</p>
+                <p><i class="fas fa-map-marker-alt"></i> No 261/A/3/5, Hokandara Road, Thalawathugoda</p>
+                <p><i class="fas fa-envelope"></i> hello@bookify.com</p>
+            </div>
+        </div>
+    
+        
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bookify. All Rights Reserved.</p>
+            <p>Designed & Developed by ⚡︎ Aro ⚡︎</p>
+        </div>
+    </footer>
+</body>
+</html>

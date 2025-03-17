@@ -1,0 +1,91 @@
+
+.signup {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #16213e, #0f3460);
+}
+
+
+.signup span {
+    color: #e94560;
+}
+
+.signup h1 {
+    font-size: 40px;
+    color: #2ec4ff;
+    margin-bottom: 10px;
+}
+
+.signup p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+form {
+    max-width: 500px;
+    margin: auto;
+    background: #0f3460;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    color: #2ec4ff;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #16213e;
+    color: white;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(-1deg, #2ec4ff,#0f3460, #ff3b5c);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-family: 'Fredoka One', cursive;
+    font-size: 13px;
+}
+
+button:hover {
+    background: #2ec4ff;
+}
+
+#success-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #2ecc71;
+}
+
+#success-message a {
+    color: #e94560;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#success-message a:hover {
+    color: #2ec4ff;
+}
+
+.hidden {
+    display: none;
+}
