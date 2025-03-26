@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Bookify</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .profile-container {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error-message {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 2rem;
+            color: #fff;
+            line-height: 1.5;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .error-message span {
+            color: #e94560;
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .error-message {
+                font-size: 1.5rem;
+            }
+            
+            .error-message span {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Book<span>ify</span></a>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">Home</a></li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+                <li><a href="profile.html" id="profile-link" class="active">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <div class="error-message">
+                <span>🚫🤖❌</span>
+                "You don't have a profile because the system tried to generate one, 
+                but the servers overheated, the database crashed, and the developers 
+                had to take a day off to recover.<br><br>
+                
+                Even AI couldn't process your existence without throwing an error message.<br><br>
+                
+                Now the entire network runs on a strict 'No You' policy."
+                <p style="font-size: 1rem; margin-top: 2rem; color: #00a8cc">
+                    (Maybe try existing? Or not. We're not sure anymore.)
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <p>© 2025 Bookify. All rights reserved.</p>
+                <p>Error Code: 404-USER-NOT-FOUND</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

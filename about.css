@@ -1,0 +1,78 @@
+
+body {
+    font-family: 'Fredoka One', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #16213e, #0f3460);
+    color: #333;
+}
+
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #16213e, #0f3460);
+    margin-bottom: 250px;
+   
+}
+
+.about h1 {
+    font-size: 36px;
+    color: #2ec4ff;
+}
+
+.about span {
+    color: #e94560;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+    margin-left: 50px; 
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #e94560;
+    margin-top: 100px;
+}
+
+.about-text p {
+    font-size: 16px;
+}
+
+.slider-container {
+    position: relative;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top:75px ;
+    gap: 100px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movie.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Book<span>ify</span></a>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" id="home-link">Home</a></li>
+                <li><a href="about.html" id="aboutus-link">About Us</a></li>
+                <li><a href="contact.html" id="contactus-link">Contact Us</a></li>
+                <li><a href="signup.html" id="signup-link">Sign Up</a></li>
+                <li><a href="login.html" id="login-link">Login</a></li>
+                <li><a href="profile.html" id="profile-link">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="booking-container">
+        <div class="event-details">
+            <div class="video-container">
+                <video id="event-video" autoplay loop muted playsinline>
+                    <source src=" " type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <h1 id="event-title"></h1>
+            <div class="event-info">
+                <p id="event-date-display"></p>
+                <p id="event-location-display"></p>
+                <p id="event-time-display"></p>
+            </div>
+        </div>
+
+        <div class="ticket-selection">
+            <h2>Movie Booking</h2>
+            
+            <div class="event-selection">
+                <label for="select-location">Select Location:</label>
+                <select id="select-location">
+                    <option value="">Choose a location</option>
+                    <option value="Savoy Cinema - Colombo">Savoy Cinema - Colombo</option>
+                    <option value="Majestic Cineplex - Colombo">Majestic Cineplex - Colombo</option>
+                    <option value="Regal Cinema - Colombo">Regal Cinema - Colombo</option>
+                    <option value="Liberty Cinema - Colombo">Liberty Cinema - Colombo</option>
+                    <option value="Empire Cinema - Maharagama">Empire Cinema - Maharagama</option>
+                    <option value="Hollywood Cinema - Kandy">Hollywood Cinema - Kandy</option>
+                    <option value="CELESTIAL Cinema - Nugegoda">CELESTIAL Cinema - Nugegoda</option>
+                    <option value="Scope Cinemas - Colombo">Scope Cinemas - Colombo</option>
+                    <option value="PVR Cinemas - Colombo">PVR Cinemas - Colombo</option>
+                    <option value="Cinecity - Kurunegala">Cinecity - Kurunegala</option>
+                </select>
+
+                <label for="select-date">Select Date:</label>
+                <input type="date" id="select-date">
+
+                <label for="select-time">Select Time:</label>
+                <select id="select-time">
+                    <option value="">Choose a time</option>
+                    <option value="7:00 AM">7:00 AM</option>
+                    <option value="9:00 AM">9:00 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="1:00 PM">1:00 PM</option>
+                    <option value="3:00 PM">3:00 PM</option>
+                    <option value="5:00 PM">5:00 PM</option>
+                    <option value="7:00 PM">7:00 PM</option>
+                    <option value="8:30 PM">8:30 PM</option>
+                    <option value="9:30 PM">9:30 PM</option>
+                    <option value="10:00 PM">10:00 PM</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <h2>Select Your Seats</h2>
+                <div class="seat-container">
+                    <div class="screen">All eyes this way please! 🎬</div>
+                    <div class="seats-grid" id="seats-grid"></div>
+                </div>
+                <div class="seat-legend">
+                    <div><span class="seat seat-example available-example"></span> Available</div>
+                    <div><span class="seat seat-example selected-example"></span> Selected</div>
+                    <div><span class="seat seat-example occupied-example"></span> Occupied</div>
+                </div>
+            </div>
+            
+            <div class="total-section">
+                <h3>Total Amount:</h3>
+                <div id="total-amount">0 LKR</div>
+            </div>
+            <div class="booking-form-container" id="bookingFormContainer">
+                <h2>Personal Details</h2>
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="nic">NIC Number:</label>
+                        <input type="text" id="nic" name="nic" required>
+                        <div class="error-message" id="nicError"></div>
+                    </div>
+                </form>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout →</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="logo">Book<span>ify</span></h3>
+                <p>Bookify is your go-to platform for booking concerts, movies, conferences, and more. Experience seamless event bookings with advanced features and real-time availability.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Site Map</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">SignUp</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>FAQ</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> +94777389712 | +94777731672</p>
+                <p><i class="fas fa-map-marker-alt"></i> No 261/A/3/5, Hokandara Road, Thalawathugoda</p>
+                <p><i class="fas fa-envelope"></i> hello@bookify.com</p>
+            </div>
+        </div>
+    
+        
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bookify. All Rights Reserved.</p>
+            <p>Designed & Developed by ⚡︎ Aro ⚡︎</p>
+        </div>
+    </footer>
+
+    <script src="movie.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
